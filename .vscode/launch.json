@@ -1,0 +1,159 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "01 - Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "01buildVSCodeTemplate",
+            "program": "${workspaceFolder}/01/VSCodeTemplate/bin/Debug/net6.0/VSCodeTemplate.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/01/VSCodeTemplate",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://*:5001" 
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "04 - Srv - Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "04BuildSrv",
+            "program": "${workspaceFolder}/04/Start/DataHub/DataHub.Server/bin/Debug/net6.0/DataHub.Server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/04/Start/DataHub/DataHub.Server",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://*:5001" 
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        }, 
+        {
+            "name": "04 - Client - Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "04BuildClient",
+            "program": "${workspaceFolder}/04/Start/DataHub/DataHub.Client/bin/Debug/net6.0/DataHub.Client.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/04/Start/DataHub/DataHub.Client",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "05 - Srv - Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "05BuildSrv",
+            "program": "${workspaceFolder}/05/End/DataHub/DataHub.Server/bin/Debug/net6.0/DataHub.Server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/05/End/DataHub/DataHub.Server",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://*:5001" 
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "05 - Client - Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "05BuildClient",
+            "program": "${workspaceFolder}/05/End/DataHub/DataHub.Client/bin/Debug/net6.0/DataHub.Client.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/05/End/DataHub/DataHub.Client",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "06 - Srv - Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "06BuildSrv",
+            "program": "${workspaceFolder}/06/Start/DataHub/DataHub.Server/bin/Debug/net6.0/DataHub.Server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/06/Start/DataHub/DataHub.Server",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://*:5001" 
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },       
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": "Launch Template",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildTemplate",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Template/bin/Debug/net6.0/Template.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Template",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            // "serverReadyAction": {
+            //     "action": "openExternally",
+            //     "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            // },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },{
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": "Launch Manual",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildManual",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Manual/bin/Debug/net6.0/Manual.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Manual",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            // "serverReadyAction": {
+            //     "action": "openExternally",
+            //     "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            // },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}

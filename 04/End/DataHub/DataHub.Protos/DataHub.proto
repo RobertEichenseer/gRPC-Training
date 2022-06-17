@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "DataHub.ServiceDefinition";
+
+import "google/protobuf/timestamp.proto";
+
+package MsgBroker;
+
+
+// Define Ingest Service (Send Data To DataHub)
+service Ingest {
+  rpc SendDataPackage (RequestSendDataPackage) returns (ResponseSendDataPackage);
+}
+
+// Send Data To DataHub
+message RequestSendDataPackage {
+    string telemetryGuid = 1;    
+    string tagName = 2;
+    repeated string tagValue = 3;
+    string trackingGuid = 4;
+}
+
+message ResponseSendDataPackage {
+    bool isSuccess = 1;
+    string lastError = 2;
+    string trackingGuid = 3;
+    int64 dataPackageCount = 4; 
+    google.protobuf.Timestamp timeStamp = 5;  
+}

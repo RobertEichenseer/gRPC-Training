@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Template";
+
+package MsgBroker;
+
+enum ReturnStatus {
+    ERROR = 0;
+    SUCCESS = 1; 
+    INVALID = 2;  
+}

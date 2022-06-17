@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+option csharp_namespace = "DataHub.ServiceDefinition";
+
+import "google/protobuf/timestamp.proto";
+
+package MsgBroker;
+
+
+// Define Ingest Service (Send Data To DataHub)
+service Ingest {
+  rpc SendDataPackage (RequestSendDataPackage) returns (ResponseSendDataPackage);
+  rpc SendDataPackagesStream (stream RequestSendDataPackageStream) returns (ResponseSendDataPackage);
+  
+}
+
+// Send Stream Data To DataHub
+message RequestSendDataPackageStream {
+  string telemetryGuid = 1;    
+  string tagName = 2;
+  string tagValue = 3;
+  string trackingGuid = 4;
+}
+
+// Send Data To DataHub
+message RequestSendDataPackage {
+    string telemetryGuid = 1;    
+    string tagName = 2;
+    repeated string tagValue = 3;
+    string trackingGuid = 4;
+}
+
+message ResponseSendDataPackage {
+    bool isSuccess = 1;
+    string lastError = 2;
+    string trackingGuid = 3;
+    int64 dataPackageCount = 4; 
+    google.protobuf.Timestamp timeStamp = 5;  
+}
+
+
+
+// Define Egress Service (Get Data From DataHub)
+service Egress {
+  rpc GetDataPackagesStream (RequestGetDataPackage) returns (stream ResponseGetDataPackageStream);
+}
+
+// Egress Telemtry
+message RequestGetDataPackage {
+  string tagName = 2;
+  string trackingGuid = 4;
+}
+
+message ResponseGetDataPackageStream {
+  bool IsSuccess = 1;
+  string LastError = 2;
+  string trackingGuid = 3;
+  string tagName = 4;
+  string tagValue = 5;
+}

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <Protobuf Include="..\DataHub.Protos\DataHub.proto" GrpcServices="Client" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <PackageReference Include="google.protobuf" Version="3.21.0" />
+    <PackageReference Include="grpc.net.client" Version="2.46.0" />
+    <PackageReference Include="grpc.tools" Version="2.46.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+
+</Project>
