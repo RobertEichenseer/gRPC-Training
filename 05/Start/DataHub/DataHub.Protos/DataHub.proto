@@ -10,15 +10,6 @@ package MsgBroker;
 // Define Ingest Service (Send Data To DataHub)
 service Ingest {
   rpc SendDataPackage (RequestSendDataPackage) returns (ResponseSendDataPackage);
-  rpc SendDataPackagesStream (stream RequestSendDataPackageStream) returns (ResponseSendDataPackage); 
-}
-
-// Send Stream Data To DataHub
-message RequestSendDataPackageStream {
-  string telemetryGuid = 1;    
-  string tagName = 2;
-  string tagValue = 3;
-  string trackingGuid = 4;
 }
 
 

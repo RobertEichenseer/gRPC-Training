@@ -24,6 +24,9 @@ public class IngestService : Ingest.IngestBase
         });
     }
 
+    //In order to avoid build errors I've added the necessary function already to the "Start project"
+    //No need for you to copy it from the "End" project
+
     //External Counter Storage needed - static class variable not appropriate - just for demo purpose
     private static int _packageCounter = 0; 
     public override async Task<ResponseSendDataPackage> SendDataPackagesStream (IAsyncStreamReader<RequestSendDataPackageStream> request, ServerCallContext context) 

@@ -8,6 +8,10 @@ GrpcChannel grpcChannel = GrpcChannel.ForAddress(serverAddress);
 // Ingest Data 
 Ingest.IngestClient ingestClient = new Ingest.IngestClient(grpcChannel);
 
+
+//In order to avoid build errors I've added the necessary function already to the "Start project"
+//No need for you to copy it from the "End" project
+
 using var sendDataPackagesStream = ingestClient.SendDataPackagesStream(); 
 
 for (int i=0; i<10; i++)
