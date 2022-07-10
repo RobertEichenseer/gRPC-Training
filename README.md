@@ -22,7 +22,7 @@ Tools used in the training:
 - [protoc Compiler - C# plug-in (nuget)](https://nuget.info/packages/Grpc.Tools/2.46.3)
 
 ### gRPC Intro
-A brief introduction to the basics and concepts of gRPC. [Intro](./Intro/Readme.md) 
+A brief introduction to the basics and concepts of gRPC. [Intro](./Intro/README.md) 
 
 ### Chapter 01
 Building a first gRPC server using .NET Core tooling and ASP.NET Core/C#
