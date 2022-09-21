@@ -1,11 +1,9 @@
 # gRPC Masterclass (with .NET Core & C#)
-## gRPC Intro
-### Overview
-gRPC was accepted in Feb. 2017 as [Incubating Project](https://www.cncf.io/project/grpc) by the [Cloud Native Computing Foundation](https://www.cncf.io/). 
-![](doc/gRPCIncubating.png)
-gRPC is becoming more and more popular in OSS as well as enterprise applications. Especially in microservices based architectures the use of gRPC is gaining popularity. 
-### Training
-This training provides an introduction to using gRPC in own projects by using .NET Core 6.0. 
+## Training
+This training provides material for a self-paced gRPC training. It's using .NET Core 6.0 and Powershell
+
+## Companion material 
+It can be used as companion material for the LinkedIn Learing traing ["Cross-Plattform-Microservices with ASP.NET Core 6.0 and gRPC"](https://www.linkedin.com/learning/cross-plattform-microservices-mit-asp-dot-net-core-6-0-und-grpc?u=0)
 
 ## Training Structure
 - Start: folder for own experiments/trainings. 
@@ -21,32 +19,29 @@ Tools used in the training:
 - [protoc Compiler](https://grpc.io/docs/protoc-installation/)
 - [protoc Compiler - C# plug-in (nuget)](https://nuget.info/packages/Grpc.Tools/2.46.3)
 
-### gRPC Intro
-A brief introduction to the basics and concepts of gRPC. [Intro](./Intro/README.md) 
-
 ### Chapter 01
-Building a first gRPC server using .NET Core tooling and ASP.NET Core/C#
-[Chapter 01](./01/README.md)
+Building a first gRPC server using .NET Core tooling and ASP.NET Core/C#. 
+[Link to chapter 01](./01/README.md)
 
 ### Chapter 02
 Introduction into ProtocolBuffers as Interface Definition Language (IDL) for contracts between communication partners.
-[Chapter 02](./02/Readme.md)
+[Link to chapter 02](./02/Readme.md)
 
 ### Chapter 03
 Introduction to using the protoc compiler to create class definitions and function stubs. Developing a ASP.NET Core based gRPC server. 
-[Chapter 03](./03/README.md)
+[Link to chapter 03](./03/README.md)
 
 ### Chapter 04
 Introduction simplified application (DataHub Server & DataHub Client).
-[Chapter 04](./04/README.md)
+[Link to chapter 04](./04/README.md)
 
 ### Chapter 05
 Data streaming with gRPC. Bi-direktional streaming from client to server and server to client. 
-[Chapter 05](./05/README.md)
+[Link to chapter 05](./05/README.md)
 
 ### Chapter 06
 Advanced gRPC Topics
 - Transient Fault Handling
 - Server Reflection 
 - Comparison REST <-> gRPC
-[Chapter 06](./06/README.md)
+[Link to chapter 06](./06/README.md)

@@ -1,5 +1,5 @@
 # Chapter 01 Goal
-Goal of chapter 01 is the creation of a simple gRPC server using dotnet core 6.0. Dotnet core 6.0 provides a project template which creates a simple gRPC server using ASP.NET core. 
+Goal of chapter 01 is the creation of a gRPC server using dotnet core 6.0. dotnet core 6.0 provides a project template which creates a simple gRPC server using ASP.NET core. 
 
 # Excercise
 ## Change folder
@@ -23,13 +23,13 @@ Open a VS Code terminal window and ensure that you're in the source code root fo
 
     Remember the port which the ASP.NET server uses to listen for incoming https traffic. 7032 in the following example: 
 
-    ![](./doc/gRPCServerPort.png)    
+    ![](./img/gRPCServerPort.png)    
 
 ## Test gRPC server
 ### gRPC Call
 gRPC uses a binary, non human readable format to exchange information between communication partners. Therefore, unlike REST, a browser cannot be used to test the gRPC server and call a function from the server. 
 
-[grpcurl](https://github.com/fullstorydev/grpcurl) can be used to call functions from a gRPC server. 
+[grpcurl](https://github.com/fullstorydev/grpcurl) can be used as client to call functions from a gRPC server. 
 
 grpcUrl takes 2 flags:
 - -proto: ProtoBuf contract file implemented by the gRPC server. [Details in Chapter 02](/02/README.md)
@@ -44,7 +44,7 @@ and two parameter:
         .\grpcurl -proto ..\..\01\Start\DataServer\Protos\greet.proto -d '{\"name\": \"Robert\"}' localhost:$listeningPort greet.Greeter/SayHello
 
 ### Expected result
-![](./doc/gRPCServerCall.png)  
+![](./img/gRPCServerCall.png)  
 
 
 
