@@ -25,7 +25,7 @@ Building a first gRPC server using .NET Core tooling and ASP.NET Core/C#.
 
 ### Chapter 02
 Introduction into ProtocolBuffers as Interface Definition Language (IDL) for contracts between communication partners.
-[Link to chapter 02](./02/Readme.md)
+[Link to chapter 02](./02/README.md)
 
 ### Chapter 03
 Introduction to using the protoc compiler to create class definitions and function stubs. Developing a ASP.NET Core based gRPC server. 
